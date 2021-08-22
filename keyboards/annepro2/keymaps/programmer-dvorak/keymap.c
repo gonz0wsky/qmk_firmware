@@ -5,6 +5,7 @@
 
 enum anne_pro_layers {
   _BASE_LAYER,
+  _SHIFT_LAYER,
   _FN1_LAYER,
   _FN2_LAYER,
 };
@@ -40,8 +41,30 @@ enum anne_pro_layers {
  [_BASE_LAYER] = KEYMAP( /* Base */
     KC_DLR, KC_AMPR, KC_LBRC, KC_LCBR, KC_RCBR, KC_LPRN, KC_EQL, KC_ASTR, KC_RPRN, KC_PLUS, KC_RBRC, KC_EXLM, KC_HASH, KC_BSPC,
     KC_TAB, KC_SCLN, KC_COMM, KC_DOT, KC_P, KC_Y, KC_F, KC_G, KC_C, KC_R, KC_L, KC_SLSH, KC_AT, KC_BSLS,
-    LT(_FN1_LAYER,KC_CAPS), KC_A, KC_O, KC_E, KC_U, KC_I, KC_D, KC_H, KC_T, KC_N, KC_S, KC_MINS, KC_ENT,
-    KC_LSFT, KC_QUOT, KC_Q, KC_J, KC_K, KC_X, KC_B, KC_M, KC_W, KC_V, KC_Z, RSFT_T(KC_UP),
+    KC_CAPS, KC_A, KC_O, KC_E, KC_U, KC_I, KC_D, KC_H, KC_T, KC_N, KC_S, KC_MINS, KC_ENT,
+    _SHIFT_LAYER, KC_QUOT, KC_Q, KC_J, KC_K, KC_X, KC_B, KC_M, KC_W, KC_V, KC_Z, RSFT_T(KC_UP),
+    KC_LCTL, KC_LGUI, KC_LALT, KC_SPC, KC_RALT, LT(_FN1_LAYER,KC_LEFT), LT(_FN2_LAYER,KC_DOWN), RCTL_T(KC_RGHT)
+),
+  /*
+  * Layer _SHIFT_LAYER
+  * ,-----------------------------------------------------------------------------------------.
+  * |  ~  |  %  |  7  |  5  |  3  |  1  |  9  |  0  |  2  |  4  |  6  |  8  |  `  |  DELETE   |
+  * |-----------------------------------------------------------------------------------------+
+  * | Tab    |  :  |  <  |  >  |     |     |     |     |     |     |     |  ?  |  ^  |   |    |
+  * |-----------------------------------------------------------------------------------------+
+  * | Caps    |     |     |     |     |     |     |     |     |     |     |  _  |    Enter    |
+  * |-----------------------------------------------------------------------------------------+
+  * | Shift      |  "  |     |     |     |     |     |     |     |     |     |    Shift       |
+  * |-----------------------------------------------------------------------------------------+
+  * | Ctrl  |  L1   |  Alt  |               space             |  Alt  |  FN1  |  FN2  | Ctrl  |
+  * \-----------------------------------------------------------------------------------------/
+  *
+  */
+ [_SHIFT_LAYER] = KEYMAP(
+    KC_TILD, KC_PERC, KC_P7, KC_P5, KC_P3, KC_P1, KC_P9, KC_P0, KC_P2, KC_P4, KC_P6, KC_P8, KC_GRV, KC_DEL,
+    KC_TAB, KC_COLN, KC_LT, KC_GT, S(KC_P), S(KC_Y), S(KC_F), S(KC_G), S(KC_C), S(KC_R), S(KC_L), S(KC_SLSH), KC_CIRC, KC_PIPE,
+    KC_CAPS, S(KC_A), S(KC_O), S(KC_E), S(KC_U), S(KC_I), S(KC_D), S(KC_H), S(KC_T), S(KC_N), S(KC_S), S(KC_MINS), KC_ENT,
+    _SHIFT_LAYER, KC_DQUO, S(KC_Q), S(KC_J), S(KC_K), S(KC_X), S(KC_B), S(KC_M), S(KC_W), S(KC_V), S(KC_Z), RSFT_T(KC_UP),
     KC_LCTL, KC_LGUI, KC_LALT, KC_SPC, KC_RALT, LT(_FN1_LAYER,KC_LEFT), LT(_FN2_LAYER,KC_DOWN), RCTL_T(KC_RGHT)
 ),
   /*
