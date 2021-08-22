@@ -61,7 +61,7 @@ enum anne_pro_layers {
   *
   */
  [_SHIFT_LAYER] = KEYMAP( /* Base */
-    KC_TILD, KC_PERC, KC_P7, KC_P5, KC_P3, KC_P1, KC_P9, KC_P0, KC_P2, KC_P4, KC_P6, KC_P8, KC_GRV, KC_DEL,
+    KC_TILD, KC_PERC, KC_7, KC_5, KC_3, KC_1, KC_9, KC_0, KC_2, KC_4, KC_6, KC_8, KC_GRV, KC_DEL,
     KC_TAB, KC_COLN, KC_LT, KC_GT, S(KC_P), S(KC_Y), S(KC_F), S(KC_G), S(KC_C), S(KC_R), S(KC_L), S(KC_SLSH), KC_CIRC, KC_PIPE,
     KC_CAPS, S(KC_A), S(KC_O), S(KC_E), S(KC_U), S(KC_I), S(KC_D), S(KC_H), S(KC_T), S(KC_N), S(KC_S), S(KC_MINS), KC_ENT,
     _SHIFT_LAYER, KC_DQUO, S(KC_Q), S(KC_J), S(KC_K), S(KC_X), S(KC_B), S(KC_M), S(KC_W), S(KC_V), S(KC_Z), RSFT_T(KC_UP),
